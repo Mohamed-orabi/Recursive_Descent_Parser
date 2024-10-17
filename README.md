@@ -11,3 +11,10 @@ Left Recursion: Recursive descent parsers don’t work well with left-recursive 
 E → E + T
 would cause the parser to keep calling E without making progress.
 Backtracking: If the grammar has multiple rules that can match the same input, the parser may need to backtrack, which can be inefficient. Left-factoring can help fix this.
+
+
+Summary:
+==
+Recursive descent parsers break down input based on grammar rules using recursive function calls.
+Each non-terminal symbol in the grammar has its own function that tries to match part of the input string.
+It’s a simple and intuitive approach, but it has limitations with left-recursive grammars and can involve backtracking if not optimized.
